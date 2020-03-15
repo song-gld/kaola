@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+#top .tabbar {
+    border-bottom: 1px solid #ccc;
+}
+
+#top .tabbar {
+    height: 40px;
+    line-height: 40px;
+    /* background-color: #f99; */
+}
+
+#top .tabbar .category {
+    float: left;
+    width: 164px;    
+    background: linear-gradient(to right,#f00,#ff3264);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ff5160;
+}
+
+#top .tabbar .category .lineicon {
+    margin-left: -30px;
+    margin-right: 30px;
+}
+
+#top .tabbar .list {
+    float: left;    
+    font-size: 15px;   
+    font-weight: 700;
+    padding-left: 25px;
+}
+
+#top .tabbar .list li {
+    float: left;
+    width: 70px;    
+}
+
+#top .tabbar .list li a {
+    display: inline-block;
+    line-height: 40px;
+    color: #000;
+}
+
+#top .tabbar .list li a:hover {
+    color: #ff1e32;
+}
+
+#top .tabbar .list li a.active {
+    color: #ff1e32;
+}
+/* 轮播图相关样式 */
+#top .banner {
+    overflow: hidden;
+}
+
+#top .banner .swiper img {
+    position: relative;
+    right: -50%;
+    transform: translate(-50%, 0);
+    min-width: 1100px;
+}

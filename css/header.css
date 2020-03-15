@@ -3,7 +3,7 @@
 /*广告样式*/
 #header .ad {
 	overflow: hidden;
-	background-color: #999;
+	background-color: #F00;
 }
 
 #header .ad img {
@@ -14,26 +14,190 @@
 }
 /*wrap样式*/
 #header .nav {
+	font-size: 13px;
 	height: 30px;
 	line-height: 30px;
 	background-color: #000;
 }
 #header .wrap-left .phone-kaola {
+	position: relative;
 	float: left;
 	color: #999;
 }
+#header .nav a {
+	color: #999;
+}
+/* 移动鼠标显示制作 */
+#header .wrap-left .kaola:hover+.phon {
+	display: block;
+}
+#header .wrap-left .phon {
+	display: none;
+}
 #header .wrap-left .phone-kaola img {	
-	position: relative;	
-	float: left;
+	position: absolute;	
 	border: 1px solid #999;
 	width: 119px;
 	top: 40px;
-	left: 90px;
+	left: -50%;
+}
+/* 二维码上箭头的实现 */
+#header .wrap-left .phone-kaola .trangle {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;	
+	border-left: 1px solid #999;
+	border-top: 1px solid #999;
+	transform: rotate(45deg);
+	top: 35px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
+#header .wrap-left .account {
+	float: left;
+}
 #header .wrap-left .account a {
 	margin-left: 20px;
 }
-#header .wrap-left .account a:hover {
+#header .nav a:hover {
 	color: #fff;
+}
+
+/* 导航右侧部分 */
+#header .wrap-right,
+#header .wrap-right .group1,
+#header .wrap-right .group2 {
+	float: right;
+}
+
+#header .wrap-right .group1 a {
+	display: inline-block;
+	margin-right: 10px;	
+}
+
+#header .wrap-right .group2 a {
+	display: inline-block;
+	padding: 0 12px;	
+}
+#header .wrap-right .group2 a:hover {
+	color: #ff1e32;
+	background-color: #fff;
+	border: 1px solid #999;
+	border-bottom-color: transparent;
+	
+}
+#header .wrap-right .group2 a:hover+ul {
+	visibility: visible;
+	background-color: #fff;
+}
+/* 小箭头的实现 */
+#header .wrap-right .group2 i {
+	position: relative;
+	display: inline-block;
+	margin-left: 6px;
+	top: 2px;
+	width: 0;
+	height: 0;
+	border: 4px solid #999;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	transition: transform .5s ease-in;
+	transform-origin: center 2px;
+}
+#header .wrap-right .group2 a:hover i {
+	border-top-color: #ff1e32;
+	transform: rotate(180deg);
+}
+#header .wrap-right ul {
+	visibility: hidden;
+	position: absolute;	
+	border: 1px solid #999;
+	border-top: none;
+	text-align: center;
+	width: 80px;	
+}
+/*  logo search cart  */
+#header .operation {
+	position: relative;
+	height: 100px;
+	/* background-color: #f99; */
+}
+#header .operation img {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	height: 80px;
+}
+#header .search {
+	position: relative;
+	float: right;
+	width: 510px;
+	height: 40px;
+	line-height: 40px;
+	right: 260px;
+	border: 2px solid #ff2337;
+	border-radius: 40px;
+	margin: auto 0;
+	top: 20px;
+	
+}
+#header .search input {
+	width: 410px;
+	height: 34px;	 
+	font-size: 13px;
+	margin-left: 35px;
+	background-color: #f6f6f6;
+}
+#header .search input::placeholder {
+	font-style: italic;
+}
+#header .search i {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background-image: url("../img/kl-sprite-01.png");
+	background-position: -466px -667px;
+	left: 8px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+#header .search .search-button {
+	position: absolute;
+	width: 60px;
+	height: 40px;
+	right: 0;
+	top: 0;
+	border-radius: 40px;
+	background: url("../img/search.png") no-repeat #ff2337 50%;
+	background-size: 40%;
+}
+#header .search .cart {
+	position: absolute;
+	right: -160px;
+	width: 106px;
+	height: 36px;
+	border: 2px solid #ff2337;
+	border-radius: 40px;
+	background-color: #f6f6f6;
+}
+#header .operation .search .cart i {
+	position: absolute;
+	left: 15px;
+	width: 20px;
+	height: 20px;
+	background: url("../img/cart.png") no-repeat 50%;
+	background-size: 20px;
+
+}
+#header .operation .search .cart span {
+	position: absolute;
+	left: 45px;
+}
+#header .operation .search .cart:hover {
+	background-color:#FFF4F5;
 }
